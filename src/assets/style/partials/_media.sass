@@ -1,0 +1,150 @@
+@media (max-width: 1150px)
+  .header
+    &_form
+      &-group
+        width: 45%
+      button
+        span
+          font-size: 12px
+    &_search
+      width: 480px
+@media (max-width: 1024px)
+  .header
+    &_logo
+      width: 50px
+      &-img, .hide_nav
+        display: none
+      &-mob
+        display: block
+  .w3-sidebar
+    width: 200px
+  .w3-button
+    padding: 15px 0 15px 0 !important
+    font-size: 11px
+  .footer
+    flex-direction: column
+    &-left
+      width: 100%
+    &-right
+      width: 100%
+    &_social
+      &-pay
+        flex-direction: column
+        align-items: flex-end
+        &-text
+          margin-right: 0
+@media (max-width: 900px)
+  .popup
+    max-width: 550px
+    padding: 40px 40px 10px 40px
+    &_title
+      font-size: 28px
+    &_desc
+      font-size: 14px
+      margin-bottom: 15px
+    &_link
+      max-width: 550px
+    &_list
+      margin-bottom: 15px
+      li
+        font-size: 14px
+        padding-left: 20px
+        margin-bottom: 10px
+    &_img-wrapp
+      display: none
+    &_ask
+      margin-bottom: 13px
+    &_text
+      font-size: 14px
+  .header
+    &_form
+      button
+        border-radius: 6px
+        padding: 15px
+        background: url(../img/search.svg) #2dbe61 no-repeat center
+        span
+          display: none
+      &-keyboard
+        display: none
+    &_search
+      width: 40%
+      margin-left: 20px
+    &_info-icon
+      margin-left: 20px
+  .footer
+    flex-direction: row
+    &-left
+      width: 50%
+    &-right
+      width: 50%
+    &_contacts
+      &-desc
+        font-size: 12px
+      &-tell
+        font-size: 16px
+      &-text
+        font-size: 11px
+      .btn
+        padding: 8px 14px
+    &_nav
+      display: none
+    &_social
+      &-icon
+        margin-bottom: 10px
+@media (max-width: 580px)
+  .popup
+    max-width: 300px
+    padding: 20px 20px 10px 20px
+    height: calc(100vh - 184px)
+    &_link
+      max-width: 300px
+      transform: translateX(-6.6%)
+    &_top
+      flex-direction: column
+      &-desc
+        font-size: 13px
+      &-date
+        font-size: 13px
+    &_title
+      font-size: 22px
+    &_ask
+      font-size: 18px
+  .header
+    &_info
+      &-tariff
+        display: none
+      &-icon
+        margin-left: 10px
+    &_search
+      width: 50%
+    &_logo
+      width: 40px
+  .nav-menu
+    display: none
+  .nav
+    margin-left: 0
+  .footer
+    margin-left: 0
+  .notifications
+    width: 300px
+    &-wrapper
+      padding: 20px 13px 0 13px
+    &_title
+      font-size: 12px
+      margin-bottom: 10px
+    &_date
+      font-size: 11px
+    &_item
+      &-bottom
+        &-title
+          font-size: 13px
+        &-desc
+          font-size: 13px
+    &-btn
+      padding: 12px 83px
+    &_close
+      right: 10px
+      left: auto
+@media (min-height: 560px)
+  .popup
+    height: calc(100vh - 284px)

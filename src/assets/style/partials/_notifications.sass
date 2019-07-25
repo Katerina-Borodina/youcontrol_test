@@ -1,0 +1,92 @@
+.notifications
+  position: fixed
+  width: 420px
+  top: 72px
+  right: -480px
+  background-color: #fff
+  z-index: 12
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+  height: calc(100% - 72px)
+  &-wrapper
+    overflow: auto
+    height: 100%
+    padding: 34px 16px 0 16px
+    &::-webkit-scrollbar
+      width: 0
+  &-btn
+    color: #ffffff
+    font-weight: 500
+    background-color: #2dbc60
+    border-radius: 3px
+    text-decoration: none
+    padding: 12px 123px
+    display: flex
+    margin-bottom: 24px
+    margin-top: 30px
+  &_close
+    width: 40px
+    height: 40px
+    position: absolute
+    background-color: #FFFFFF
+    box-shadow: -2px 1px 4px rgba(128, 128, 128, 0.5)
+    border-radius: 3px 0 0 3px
+    cursor: pointer
+    top: 16px
+    left: -40px
+    display: flex
+    justify-content: center
+  &_title
+    color: #717171
+    margin-bottom: 20px
+  &_item
+    text-decoration: none
+    padding: 18px 16px
+    &-top
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      .tag
+        font-size: 10px
+        color: #ffffff
+        padding: 6px 10px
+        border-radius: 15px
+        text-transform: uppercase
+        margin-bottom: 15px
+      .updates
+        background-color: #30bf60
+      .hot-news
+        background-color: #d0021b
+      .vebinar
+        background-color: #f79e1b
+      .meeting
+        background-color: #6dd0f6
+    &-bottom
+      &-title
+        font-weight: 500
+        font-size: 14px
+        color: #1a1a1a
+        margin-bottom: 8px
+      &-desc
+        color: #999999
+  &_date
+    font-size: 13px
+    color: #bebebe
+
+.notifications.active-from
+  right: 0
+  animation: notif-from 1s ease-in-out
+
+.notifications.active-out
+  right: -480px
+  animation: notif-out 1s ease-in-out
+
+@keyframes notif-from
+  from
+    right: -420px
+  to
+    right: 0
+@keyframes notif-out
+  from
+    right: 0
+  to
+    right: -420px

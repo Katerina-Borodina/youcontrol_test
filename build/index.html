@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/css/tabs.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="popup">
+    <div class="popup_close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L14 14" stroke="#999999" stroke-width="2"/>
+            <path d="M2 14L14 1.99829" stroke="#999999" stroke-width="2"/>
+        </svg>
+    </div>
+    <div class="popup_box">
+        <div class="popup_top">
+            <div class="popup_top-desc">Оновлення</div>
+            <div class="popup_top-date">Сьогодні 29.05.2019</div>
+        </div>
+        <h3 class="popup_title">Нові функції моніторингу</h3>
+        <p class="popup_desc">Додайте свою компанію та головних контраегентів до моніторингу та першим дізнавайтесь про істотні зміни офіційних даних</p>
+        <ul class="popup_list">
+            <li>Нові кольори;</li>
+            <li>Додавайте більше списків.</li>
+        </ul>
+        <div class="popup_img-wrapp">
+            <img class="popup_img" src="assets/img/popup1.png" alt="img">
+            <img class="popup_img" src="assets/img/popup2.png" alt="img">
+        </div>
+        <div class="popup_ask">
+            Що нового?
+        </div>
+        <p class="popup_text">Якщо ви поставите в моніторинг власне підприємство, то отримаєте автоматичне сповіщення, якщо його дані в реєстрах змінилися без вашої участі. Зі звіту моніторингу ви можете дізнатися про нього навіть раніше співробітників самого підприємства, адже сповіщення з’явиться того самого дня. За своєю ініціативою контрагент навряд чи повідомить вам цю інформацію, а вона може бути критично важливою для вашої співпраці.</p>
+
+    </div>
+    <div class="popup_link">
+        <a href="#">Наступне сповіщення</a>
+    </div>
+</div>
+<div id="bg_layer"></div>
+
+<header class="header">
+    <div class="header_logo">
+        <a href="#" class="header_logo-img">
+            <img src="assets/img/logo.svg" alt="you control">
+        </a>
+        <div class="hide_nav">
+            <img src="assets/img/hide_nav.svg" alt="hide">
+        </div>
+        <a href="#" class="header_logo-mob">
+            YC
+        </a>
+    </div>
+    <div class="header_search">
+        <form action="/" class="header_form">
+            <div class="header_form-group">
+                <input type="text" placeholder="Введіть ваш запит…">
+            </div>
+            <div class="header_form-keyboard">
+                <img src="assets/img/keyboard.svg" alt="keyboard">
+            </div>
+            <button>
+                <span>Шукати підприємство</span>
+            </button>
+        </form>
+    </div>
+    <div class="header_info">
+        <div class="header_info-tariff">
+            <p class="tariff-top">Ваш тариф</p>
+            <p class="tariff-bottom"><span>Стандартна</span> ще 217 днів</p>
+        </div>
+        <div class="header_info-icon">
+            <div class="icon-notifications">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#B2B2B2"/>
+                    <path d="M17.6974 9.21616V13.8906C18.5739 13.5915 19.1999 12.6491 19.1999 11.5533C19.1999 10.4576 18.5739 9.51536 17.6974 9.21616Z" fill="white"/>
+                    <path d="M16.2591 5.60064C15.8372 5.60064 15.5644 5.87312 15.5644 6.29504C14.5207 7.76528 12.5087 8.81696 10.1575 9.25856V13.848C12.5088 14.2898 14.5207 15.3413 15.5644 16.8115C15.5644 17.2336 15.8372 17.5059 16.2591 17.5059C16.681 17.5059 16.9535 17.2334 16.9535 16.8115V6.2952C16.9535 5.87328 16.681 5.60064 16.2591 5.60064Z" fill="white"/>
+                    <path d="M9.36389 13.8102V9.29629H6.98277C5.65669 9.29629 4.80005 10.1529 4.80005 11.4788V11.6276C4.80005 12.9537 5.65669 13.8104 6.98277 13.8104H9.36389V13.8102Z" fill="white"/>
+                    <path d="M9.068 14.505H6.81616L7.5928 17.5669C7.75584 18.2098 8.27632 18.5194 8.91904 18.3567C9.56176 18.1935 9.87168 17.6731 9.70864 17.0304L9.068 14.505Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="icon-profile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#B2B2B2"/>
+                <path d="M4.88 16.6812C5.50821 16.2651 8.84368 14.9263 9.19268 14.9564C9.22758 14.5453 9.26747 14.1341 9.30237 13.718C9.30736 13.6729 9.28243 13.6127 9.25251 13.5826C8.83371 13.1815 8.77388 12.625 8.60935 12.1135C8.57944 12.0283 8.56448 11.938 8.53456 11.8277C8.25536 11.908 8.14069 11.7275 8.07587 11.5018C7.93129 10.9653 7.77673 10.4289 7.66704 9.88234C7.59724 9.5414 7.74183 9.4361 8.19055 9.4712C8.18057 9.3609 8.16063 9.2556 8.16562 9.15031C8.2055 8.318 8.2404 7.48569 8.3102 6.65338C8.33015 6.41271 8.42986 6.16202 8.55451 5.95143C9.20764 4.87344 10.135 4.18152 11.4064 4.0311C12.9968 3.84559 14.2084 4.4974 15.1158 5.78597C15.4598 6.27232 15.5296 6.8389 15.5495 7.40547C15.5695 8.08736 15.5545 8.76925 15.5545 9.4712C15.6642 9.46117 15.734 9.44112 15.8038 9.45115C15.9783 9.46619 16.1179 9.55142 16.098 9.74697C16.0331 10.4238 15.8786 11.0807 15.5844 11.6924C15.5445 11.7776 15.385 11.8077 15.2105 11.903C15.1257 12.1787 15.026 12.5497 14.9014 12.9057C14.8366 13.0912 14.7468 13.2818 14.6222 13.4272C14.4826 13.5876 14.4377 13.7481 14.4626 13.9486C14.5025 14.2795 14.5324 14.6105 14.5673 14.9063C14.7418 14.9464 14.8964 14.9614 15.031 15.0166C16.2176 15.508 17.4042 16.0043 18.5908 16.5007C18.6905 16.5408 18.7803 16.596 18.88 16.6461C15.5296 20.9882 8.52958 21.2338 4.88 16.6812Z" fill="white"/>
+            </svg>
+            </div>
+            <div class="icon_arrow-bottom"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.8">
+                    <path d="M4 6.07886L8 10L12 6" stroke="#8E8E8E" stroke-width="2" stroke-linecap="round"/>
+                </g>
+            </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="w3-sidebar w3-bar-block nav-menu">
+    <button class="w3-bar-item w3-button tablink active-link" onclick="openTab(event, 'Dashboard')">
+        <div class="wrapp-svg">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6V0H18V6H10ZM18 18H10V8H18V18ZM0 18H8V12H0V18ZM8 10H0V0H8V10Z" />
+            </svg>
+        </div>
+        дашборд</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Dossier')">
+        <div class="wrapp-svg">
+            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13 3H7V5H13V3Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6H5V8H13V6Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13 9H5V11H13V9Z" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2H14V12H13C12.448 12 12 12.448 12 13V14H6V13C6 12.448 5.552 12 5 12H4V2ZM17 12H16V1C16 0.448 15.552 0 15 0H3C2.448 0 2 0.448 2 1V12H1C0.448 12 0 12.448 0 13V18C0 19.103 0.897 20 2 20H16C17.103 20 18 19.103 18 18V13C18 12.448 17.552 12 17 12Z" />
+            </svg>
+        </div>
+        пошук по досьє</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Monitoring')">
+        <div class="wrapp-svg">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.5C6.14 0.5 1.78 3.5 0 8C2.39 14.08 9.25 17.06 15.33 14.67C18.38 13.47 20.8 11.06 22 8C20.22 3.5 15.86 0.5 11 0.5ZM6 8C6 10.7614 8.23858 13 11 13C13.7614 13 16 10.7614 16 8C16 5.23858 13.7614 3 11 3C8.23858 3 6 5.23858 6 8ZM8 8C8 6.34315 9.34315 5 11 5C12.6569 5 14 6.34315 14 8C14 9.65685 12.6569 11 11 11C9.34315 11 8 9.65685 8 8ZM8 18H6V20H8V18ZM12 18V20H10V18H12ZM16 18H14V20H16V18Z" />
+            </svg>
+        </div>
+        моніторинг</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Counterparty')">
+        <div class="wrapp-svg">
+            <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C7.65685 0 9 1.34315 9 3C9 4.65685 7.65685 6 6 6C4.34315 6 3 4.65685 3 3C3 1.34315 4.34315 0 6 0ZM6 8C8 8 12 9 12 11V13H0V11C0 9 4 8 6 8ZM15.1468 6.92705L14.4733 10.8541L18 9L21.5267 10.8541L20.8532 6.92705L23.7063 4.1459L19.7634 3.57295L18 0L16.2366 3.57295L12.2937 4.1459L15.1468 6.92705Z" />
+            </svg>
+        </div>
+        мої контрагенти</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Сonnections')">
+        <div class="wrapp-svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 13H17V12C17 10.346 15.654 9 14 9H11V7H13C13.552 7 14 6.552 14 6V1C14 0.448 13.552 0 13 0H7C6.448 0 6 0.448 6 1V6C6 6.552 6.448 7 7 7H9V9H6C4.346 9 3 10.346 3 12V13H1C0.448 13 0 13.448 0 14V19C0 19.552 0.448 20 1 20H7C7.552 20 8 19.552 8 19V14C8 13.448 7.552 13 7 13H5V12C5 11.449 5.449 11 6 11H14C14.551 11 15 11.449 15 12V13H13C12.448 13 12 13.448 12 14V19C12 19.552 12.448 20 13 20H19C19.552 20 20 19.552 20 19V14C20 13.448 19.552 13 19 13Z" />
+            </svg>
+        </div>
+        пошук зв'язків</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Markets')">
+        <div class="wrapp-svg">
+            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3273 7.79669C17.3273 3.49822 13.8293 0.000183105 9.5308 0.000183105H8.66452V8.66297H17.3273V7.79669ZM6.93023 9.53012V1.78645L6.82281 1.80031C2.93322 2.28629 0 5.60934 0 9.52925C0 13.8286 3.49803 17.3258 7.79651 17.3258C9.62436 17.3258 11.4011 16.6804 12.7993 15.5057L12.8573 15.4572L6.93023 9.53012ZM16.1612 16.5219L10.0375 10.3964H19.0581C19.0581 12.4781 18.2472 14.435 16.7745 15.9085L16.1612 16.5219Z" />
+            </svg>
+        </div>
+        ринки</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Lists')">
+        <div class="wrapp-svg">
+            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.02087 0H6.96887V6H1.02087V0ZM3 2V4H5V2H3ZM20 4V2H11V4H20ZM20 10V12H11V10H20ZM0 11.5L3.58974 15L8.80219 9.91786L7.42906 8.43482L3.58974 12.17L1.44615 10.09L0 11.5Z" />
+            </svg>
+        </div>
+        список реєстрів</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openTab(event, 'Information')">
+        <div class="wrapp-svg">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 4.47715 4.47715 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10ZM11 5V7H9V5H11ZM11 9V15H9V9H11Z" />
+            </svg>
+        </div>
+        інформація</button>
+</section>
+
+<div class="nav">
+
+    <div id="Dashboard" class="w3-container menu-link " style="display:flex">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="Dossier" class="w3-container menu-link" style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Monitoring" class="w3-container menu-link" style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Counterparty" class="w3-container menu-link " style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Сonnections" class="w3-container menu-link" style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Markets" class="w3-container menu-link" style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Lists" class="w3-container menu-link " style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="Information" class="w3-container menu-link" style="display:none">
+        <p class="title-content">Мій YouControl</p>
+        <div class="box-item">
+            <div class="monitoring item">
+                <p class="item_title">Моніторинг</p>
+                <div class="item_numbers"><span>3 </span>/ 1000</div>
+                <div class="item_countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent.svg" alt="img">
+                    </div>
+                    <p>Контрагентів в моніторингу</p>
+                </div>
+                <div class="item_countragent-num">
+                    <div class="wrapp-img">
+                        <img src="assets/img/countragent-num1.svg" alt="img">
+                    </div>
+                    <p>Непереглянутих змін</p>
+                    <span>1</span>
+                </div>
+                <div class="item_countragent-num item_countragent-num-last">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-pin.svg" alt="img">
+                    </div>
+                    <p>Відкладених змін</p>
+                    <span>0</span>
+                </div>
+                <button onclick="openTab(event, 'Monitoring')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моніторингу
+                </button>
+            </div>
+            <div class="my-counterparty item">
+                <p class="item_title">Мої контрагенти</p>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-star.svg" alt="img">
+                    </div>
+                    <p>Обрані контрагенти</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <div class="item_countragent my-countragent">
+                    <div class="wrapp-img">
+                        <img src="assets/img/i-visibility.svg" alt="img">
+                    </div>
+                    <p>Історія переглядів</p>
+                </div>
+                <ul class="list-countr">
+                    <li>
+                        зат "термо" <span>/ 13392504</span>
+                    </li>
+                    <li>
+                        прат "гоголівська с... <span>/ 00307655</span>
+                    </li>
+                    <li>
+                        тов "промподшип.. <span>/ 31377393</span>
+                    </li>
+                </ul>
+                <button onclick="openTab(event, 'Counterparty')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до моїх контрагентів
+                </button>
+            </div>
+            <div class="search-connections item">
+                <p class="item_title">Пошук зв'язків</p>
+                <div class="item_search-bg">
+                    <p>Знаходьте зв'язки між фізичними особами та компаніями</p>
+                    <p><span>Виявляйте зв'язки персоналу та контраегентів з будь-якою компанією та керівником</span></p>
+                </div>
+                <button onclick="openTab(event, 'Сonnections')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="markets item">
+                <p class="item_title">Ринки</p>
+                <div class="markets_img-wrapper">
+                    <img src="assets/img/markets.png" alt="img">
+                </div>
+                <p class="markets_desc">Швидко знайдіть компанії за потрібними вам параметрами</p>
+                <button onclick="openTab(event, 'Markets')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    почати дослідження
+                </button>
+            </div>
+            <div class="list-registers item">
+                <p class="item_title">Список реєстрів</p>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з України</p>
+                    <span>165</span>
+                </div>
+                <div class="list-registers_wrap">
+                    <p>Реєстрів з усього світу</p>
+                    <span>246</span>
+                </div>
+                <div class="list-registers_desc">Ви можете легко знайти потрібний реєстр з понад 400 відкритих реєстрів по всьому світі</div>
+                <button onclick="openTab(event, 'Lists')" class="link-monitoring">
+                    <div class="wrapp-img">
+                        <img src="assets/img/arrow-right.svg" alt="img">
+                    </div>
+                    до списку реєстрів
+                </button>
+            </div>
+            <div class="wrapper-items item item-small">
+                <div class="news">
+                    <div class="item-small-title">
+                        <p class="item_title">Новини</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до новин
+                        </button>
+                    </div>
+                    <div class="news_content">
+                        <div class="news_content-img">
+                            <img src="assets/img/news-img.png" alt="img">
+                        </div>
+                        <div class="news_text">
+                            <p class="news_text-date">
+                                31 липня 2018 р
+                            </p>
+                            <p class="news_text-descr">
+                                YouControl долучився до вибору кращих аграріїв Херсонщини
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="articles">
+                    <div class="item-small-title">
+                        <p class="item_title">Статті</p>
+                        <button onclick="openTab(event, 'Lists')" class="link-monitoring-small">
+                            <div class="wrapp-img">
+                                <img src="assets/img/arrow-right.svg" alt="img">
+                            </div>
+                            до статей
+                        </button>
+                    </div>
+                    <div class="articles_text">
+                        <div class="articles_text-date">24 липня 2018 р</div>
+                        <div class="articles_text-descr">7 головних ознак ризику при роботі з підозрілим керівником компанії</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-left">
+        <div class="footer_contacts">
+            <div class="footer_contacts-desc">
+                Дзвінок безкоштовний
+            </div>
+            <div class="footer_contacts-tell">
+                0 800 309 077
+            </div>
+            <a href="#" class="footer_contacts-mail">
+                mail@youcontrol.com.ua
+            </a>
+            <div class="footer_contacts-text">
+                Вирішили купувати?
+            </div>
+            <a class="btn" href="#">Замовити дзвінок</a>
+        </div>
+        <div class="footer_nav">
+            <div class="footer_nav-title">
+                Для користувачів
+            </div>
+            <ul class="footer_nav-links for_user">
+                <li class="footer_nav-links--item for_user-item"><a href="#">Можливості</a></li>
+                <li class="footer_nav-links--item for_user-item"><a href="#">Кейси</a></li>
+                <li class="footer_nav-links--item for_user-item"><a href="#">Тарифи</a></li>
+            </ul>
+        </div>
+        <div class="footer_nav">
+            <div class="footer_nav-title">
+                Наші проекти
+            </div>
+            <div class="footer_nav-links our_project">
+                <div class="our_project-wrapper">
+                    <img src="assets/img/access1.svg" alt="img">
+                    <div class="footer_nav-links--item our_project-item">
+                        <a href="#">YouScore</a>
+                        <span>Доступно по API</span>
+                    </div>
+                </div>
+                <div class="our_project-wrapper">
+                    <img src="assets/img/i-extensions.svg" alt="img">
+                    <div class="footer_nav-links--item our_project-item">
+                        <a href="#">Додаток</a>
+                        <span>Chrome, Mozilla</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-right">
+        <div class="footer_social">
+            <div class="footer_social-desc">
+                &#169; YouControl - повне досьє на <br> кожну компанію України
+            </div>
+            <div class="footer_social-icon">
+                <div  class="facebook">
+                    <a href="#">
+                        <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.94599 2.94701V4.55001H0.692993V6.51701H1.94599V12.341H4.52899V6.51701H6.25799C6.25799 6.51701 6.41899 5.57201 6.49599 4.54301H4.53599V3.20601C4.59087 2.93738 4.82203 2.7409 5.09599 2.73001H6.50299V0.693012H4.59199C1.88299 0.686012 1.94599 2.65301 1.94599 2.94701Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="youtube">
+                    <a href="#">
+                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0V9.75524L8.54143 4.99004L0 0Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="linkedin">
+                    <a href="#">
+                        <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.140275 10.9717H2.57258V3.66461H0.140275V10.9717ZM10.5572 4.33384C10.0458 3.77538 9.37012 3.49661 8.53012 3.49661C8.21997 3.49661 7.93935 3.53446 7.68551 3.61015C7.45342 3.67609 7.2358 3.78506 7.04397 3.93138C6.86951 4.06984 6.73012 4.19723 6.62766 4.31446C6.52981 4.42615 6.43381 4.55723 6.34058 4.70492V3.66461H3.91381L3.9212 4.01907C3.92581 4.25446 3.92858 4.98184 3.92858 6.20123C3.92858 7.41969 3.92304 9.01015 3.91381 10.9708H6.33966V6.89446C6.33966 6.64431 6.36643 6.44492 6.41997 6.29815C6.52335 6.04707 6.67935 5.83661 6.88889 5.66769C7.09751 5.49784 7.35689 5.41292 7.66612 5.41292C8.08889 5.41292 8.39997 5.55877 8.59843 5.85138C8.79781 6.144 8.89751 6.54831 8.89751 7.06431V10.9717H11.3234V6.78461C11.3234 5.70831 11.0677 4.89046 10.5572 4.33384ZM1.37166 0.149536C0.96366 0.149536 0.633198 0.26769 0.378429 0.506767C0.128399 0.739317 -0.00947991 1.06821 -3.27723e-05 1.40954C-3.27723e-05 1.76861 0.122736 2.06861 0.369198 2.30954C0.613813 2.54954 0.938736 2.66954 1.34212 2.66954H1.35597C1.76951 2.66954 2.10181 2.54954 2.35566 2.30954C2.60858 2.06861 2.73227 1.76861 2.72766 1.40954C2.73236 1.06993 2.59638 0.743514 2.35197 0.50769C2.10643 0.26769 1.77966 0.149536 1.37166 0.149536Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="telegram">
+                    <a href="#">
+                        <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.977 6.13857L0.211956 5.09004C-0.0688847 4.98311 -0.0713247 4.58028 0.208716 4.47055L11.5565 0.0227777C11.7971 -0.0717529 12.0453 0.142384 11.9929 0.399071L9.95649 10.3516C9.90849 10.5866 9.63733 10.6932 9.44593 10.5518L6.666 8.50123C6.49716 8.3767 6.26704 8.38337 6.10548 8.51712L4.5642 9.79373C4.38528 9.94235 4.11572 9.85956 4.04724 9.63559L2.977 6.13857ZM9.27869 2.19881L3.87476 5.58041C3.66764 5.7103 3.57012 5.96443 3.63704 6.20234L4.22132 8.28823C4.2628 8.43604 4.47396 8.42088 4.49408 8.26815L4.646 7.12427C4.67464 6.90892 4.77576 6.71051 4.93252 6.56225L9.39233 2.35024C9.47573 2.27164 9.37581 2.13821 9.27869 2.19881Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+            <div class="footer_social-pay">
+                <div class="footer_social-pay-text">Сплачуйте онлайн:</div>
+                <div class="footer_social-pay-icon">
+                    <a href="#">
+                        <img src="assets/img/i-visa_icon.svg" alt="visa">
+                    </a>
+                    <a href="#">
+                        <img src="assets/img/mastercard.svg" alt="mastercard">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<section class="notifications">
+    <div class="notifications-wrapper">
+        <div class="notifications_close">
+            <img src="assets/img/notifications-close.svg" alt="close">
+        </div>
+        <p class="notifications_title">Сповіщення від YouControl</p>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="updates tag">Оновлення</span>
+                <div class="notifications_date">Сьогодні 29.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit. </p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="updates tag">Оновлення</span>
+                <div class="notifications_date">28.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Оновленна вкладка судових рішень</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="hot-news tag">гаряча новина</span>
+                <div class="notifications_date">28.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Сьогодні YouControl провів зустріч з представн..</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="vebinar tag">Вебінар</span>
+                <div class="notifications_date">Сьогодні 21.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="updates tag">Оновлення</span>
+                <div class="notifications_date">Сьогодні 29.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="updates tag">Оновлення</span>
+                <div class="notifications_date">Сьогодні 29.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="updates tag">Оновлення</span>
+                <div class="notifications_date">Сьогодні 29.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a href="#" class="notifications_item">
+            <div class="notifications_item-top">
+                <span class="meeting tag">Зустріч</span>
+                <div class="notifications_date">Сьогодні 15.05.2019</div>
+            </div>
+            <div class="notifications_item-bottom">
+                <p class="notifications_item-bottom-title">Нові функції моніторинга</p>
+                <p class="notifications_item-bottom-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium amet delectus fugit incidunt mollitia nihil nulla quo sapiente ullam!</p>
+            </div>
+        </a>
+        <a class="notifications-btn" href="#">Переглянути всі</a>
+    </div>
+</section>
+
+<script>
+    function openTab(evt, tagName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu-link");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-link", "");
+        }
+        document.getElementById(tagName).style.display = "flex";
+        evt.currentTarget.className += " active-link";
+    }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
